@@ -6,6 +6,7 @@ public abstract class Personatge {
     private boolean estaViu;
     private int vidaActual;
     private int malFet;
+    private int curandero;
     private Equip equip;
 
     public Personatge(String nom, Equip equip) {
@@ -35,6 +36,24 @@ public abstract class Personatge {
     public void rebreMal(int mal) {
         if (estaViu) {
             vidaActual = vidaActual - mal;
+            if (vidaActual <=0) {
+                estaViu = false;
+            }
+            UI.mostrarRebreAtac(this, vidaActual, estaViu);
+        }
+    }
+
+    protected void setCurar(Personatge oponent, int curar) {
+        if (estaViu) {
+            UI.mostrarFerAtac(this, oponent, curar);
+            oponent.rebreMal(curar);
+            curandero = curandero + curar;
+        }
+    }
+
+    public void rebreCurar (int curar) {
+        if (estaViu) {
+            vidaActual = vidaActual + curar;
             if (vidaActual <=0) {
                 estaViu = false;
             }
