@@ -1,4 +1,3 @@
-package src;
 
 public class EquipArquers extends Equip {
     public EquipArquers(String nom) {

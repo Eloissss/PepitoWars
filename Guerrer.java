@@ -1,4 +1,3 @@
-package src;
 
 public class Guerrer extends Personatge {
     public Guerrer(String nom, Equip equip) {

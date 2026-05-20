@@ -1,5 +1,3 @@
-package src;
-
 public class EquipArquerIGuerrer extends Equip {
     public EquipArquerIGuerrer(String nom) {
         super(nom);

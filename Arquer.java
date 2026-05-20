@@ -1,5 +1,3 @@
-package src;
-
 public class Arquer extends Personatge {
     private final int FLETXES_INICIALS = 4;
     private final int RONDES_PER_FABRICAR = 4;
