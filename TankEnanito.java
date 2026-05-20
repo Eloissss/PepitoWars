@@ -4,12 +4,9 @@ public class TankEnanito extends Personatge {
 
     public TankEnanito(String nom, Equip equip) {
         super(nom, equip);
-
-
     }
 
     public void ferAccio(Personatge oponent) {
-
         int mal = defensa;
 
         super.atacarAmbMal(oponent, mal);
@@ -18,7 +15,6 @@ public class TankEnanito extends Personatge {
         for(int i = 2; i>0; i--){
             defensa += Dau.tirar(10);
         }
-
     }
 
 
@@ -33,9 +29,5 @@ public class TankEnanito extends Personatge {
         if(defensa<0) defensa =0;
 
         super.rebreMal(mal);
-
-
     }
-
-
 }
